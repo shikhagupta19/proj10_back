@@ -1,0 +1,28 @@
+package com.rays.p10.form;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+
+import com.rays.p10.common.BaseForm;
+
+
+
+/**
+ * Contains Forget Password form elements and their declarative input
+ * validations.
+ */
+public class ForgetPasswordForm extends BaseForm {
+
+	@NotEmpty
+	@Email
+	private String login;
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+}
